@@ -1,0 +1,11 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Akaya Telivigala", cursive;
+}
+@import "./_song";
+@import "./_player";
+@import "./_library_song";

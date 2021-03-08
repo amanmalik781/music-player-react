@@ -1,0 +1,37 @@
+.library-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 20rem;
+  height: 100%;
+  background-color: white;
+  box-shadow: 2px 2px 30px rgba(128, 128, 128, 0.904);
+  overflow: scroll;
+  h2 {
+    padding: 2rem;
+  }
+}
+.library-songs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem 2rem 1rem 2rem;
+}
+.library-song-container {
+  // min-height: 60vh;
+  margin-bottom: 30px;
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+  //justify-content: center;
+  div {
+    margin-left: 10px;
+  }
+  img {
+    width: 30%;
+    //border-radius: 50%;
+  }
+  &:hover {
+    background: rgb(233, 229, 229);
+  }
+}
