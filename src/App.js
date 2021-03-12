@@ -5,6 +5,7 @@ import Song from "./components/Song";
 import chillHop from "./data";
 import { useRef, useState } from 'react';
 import Library from './components/Library';
+import Nav from './components/Nav';
 
 function App() {
   const [songs, setSongs] = useState(chillHop());
@@ -12,6 +13,7 @@ function App() {
   const [currentSong, setCurrentSong] = useState(songs[0]);
   const [isPlaying, setIsPlaying] = useState(false);
   const audioRef = useRef(null);
+  const [libraryStatus, setLibraryStatus] = useState(false);
   const [songInfo, setSongInfo] = useState({
     currentTime: 0,
     duration: 0
@@ -29,7 +31,7 @@ function App() {
 
   return (
     <div className="App">
-
+      <Nav libraryStatus={libraryStatus} setLibraryStatus={setLibraryStatus} />
       <Song currentSong={currentSong} />
       <Player
         isPlaying={isPlaying}
@@ -40,6 +42,8 @@ function App() {
         setSongInfo={setSongInfo}
       />
       <Library
+        libraryStatus={libraryStatus}
+        setSongs={setSongs}
         setCurrentSong={setCurrentSong}
         songs={songs}
         audioRef={audioRef}
